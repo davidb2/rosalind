@@ -22,5 +22,5 @@ if __name__ == '__main__':
   main(args)
 EOF
 
-echo "$FILE" > "$1"
-chmod u+x "$1"
+echo "$FILE" > "$1.py"
+chmod u+x "$1.py"
