@@ -1,6 +1,7 @@
 import os
 import sys
 
+from itertools import islice
 from pathlib import Path
 
 
@@ -106,6 +107,10 @@ def fasta(fin=sys.stdin):
   finally:
     if providedFileName:
       fin.close()
+
+
+def fastaN(n, *args, **kwargs):
+  return list(islice(fasta(*args, **kwargs), n))
 
 
 def pprint(x):
